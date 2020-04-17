@@ -20,6 +20,6 @@ public class moveBlock : MonoBehaviour
     private void FixedUpdate()
     {
         t += Time.deltaTime;
-        transform.position = new Vector3(0f, Mathf.Sin(t), 0f);
+        transform.position = new Vector3(0f, Mathf.Sin(0.3f*t), 0f);
     }
 }
