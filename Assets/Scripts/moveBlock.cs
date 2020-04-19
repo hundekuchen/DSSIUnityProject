@@ -22,6 +22,8 @@ public class moveBlock : MonoBehaviour
     private void FixedUpdate()
     {
         t += Time.deltaTime;
+
         transform.position = new Vector3(0f, Mathf.Sin(speed*t), 0f);
+
     }
 }
