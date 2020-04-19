@@ -6,9 +6,11 @@ public class moveBlock : MonoBehaviour
 {
 
     float t;
+    float speed;
     // Start is called before the first frame update
     void Start()
     {
+        speed = 2.0f;
         t = 0f;
     }
 
@@ -20,6 +22,6 @@ public class moveBlock : MonoBehaviour
     private void FixedUpdate()
     {
         t += Time.deltaTime;
-        transform.position = new Vector3(0f, Mathf.Sin(0.3f*t), 0f);
+        transform.position = new Vector3(0f, Mathf.Sin(speed*t), 0f);
     }
 }
