@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 3e9ad3be597440841b95130ed88e4f07
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - imageCooledown: {fileID: 5071348092492781236, guid: 563e4aed1e7526b45809ab49be9bc2c8,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
