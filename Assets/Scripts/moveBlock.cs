@@ -27,7 +27,6 @@ public class moveBlock : MonoBehaviour
 
         transform.position = new Vector3(0f, Mathf.Sin(speed*t), 0f);
         Debug.Log("miaumiau");
-
     }
 
     //test by ben
