@@ -26,7 +26,7 @@ public class moveBlock : MonoBehaviour
         t += Time.deltaTime;
 
         transform.position = new Vector3(0f, Mathf.Sin(speed*t), 0f);
-        Debug.Log("wauwau");
+        Debug.Log("wauwasdfadsfau");
 
     }
 
