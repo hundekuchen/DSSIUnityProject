@@ -7,11 +7,13 @@ public class moveBlock : MonoBehaviour
 
     float t;
     float speed;
+    float peter;
     // Start is called before the first frame update
     void Start()
     {
         speed = 2.0f;
         t = 0f;
+        peter = 0f;
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class moveBlock : MonoBehaviour
         t += Time.deltaTime;
 
         transform.position = new Vector3(0f, Mathf.Sin(speed*t), 0f);
+        Debug.Log("wauwau");
 
     }
 
