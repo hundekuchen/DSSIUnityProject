@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - MyStupidTag
+  - player
+  - enemy
+  - enemySpawner
   layers:
   - Default
   - TransparentFX
