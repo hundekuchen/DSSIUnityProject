@@ -10,7 +10,7 @@ public class bulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        destroyTime = 2.0f;
+        destroyTime = 1.0f;
         age = 0.0f;
         speed = 30f;
         //Debug.Log(transform.forward);
@@ -28,7 +28,7 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
             Debug.Log("treffer");
-            //other.gameObject.GetComponent<enemyScript>().takeDamage(10);
+            other.gameObject.GetComponent<EnemyDamage>().takeDamage(10);
         }
     }
 }

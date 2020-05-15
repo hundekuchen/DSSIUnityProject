@@ -23,7 +23,7 @@ public class RaphaelEnemy: MonoBehaviour
     {
         Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("player").transform.position - transform.position;
         transform.rotation = Quaternion.LookRotation(dirToPlayer, Vector3.up);
-        transform.position = transform.position + transform.forward * 0.01f;
+        transform.position = transform.position + transform.forward * 0.05f;
         shootWait += Time.deltaTime;
         if (shootWait > shootDelay)
         {
