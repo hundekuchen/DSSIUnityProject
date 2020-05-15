@@ -18,7 +18,6 @@ public class moveScript : MonoBehaviour
         distDeltatTracks = 0.1f;
         distFromTracks = 0.0f;
 
-        hitpoints = 1000;
     }
 
     // Update is called once per frame
