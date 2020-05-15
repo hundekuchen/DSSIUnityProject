@@ -12,9 +12,9 @@ public class PaulEnemyBulletScript : MonoBehaviour
     {
         destroyTime = 1.0f;
         age = 0.0f;
-        speed = 30f;
+        speed = 1f;
         //Debug.Log(transform.forward);
-        Destroy(gameObject, destroyTime);
+        //Destroy(gameObject, destroyTime);
     }
 
     // Update is called once per frame

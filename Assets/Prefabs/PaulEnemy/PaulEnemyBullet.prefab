@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6857417429666625373}
   - component: {fileID: 3315463658105732104}
+  - component: {fileID: 5080977886345973184}
   m_Layer: 0
   m_Name: PaulEnemyBullet
   m_TagString: Untagged
@@ -42,6 +43,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0caf24cfee26724bbbeb8a354ac7ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5080977886345973184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867112057644007854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fd70823e2e8b041b75637bd91b5bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2241764483971262280
