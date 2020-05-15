@@ -5,14 +5,12 @@ using UnityEngine;
 public class RaphaelEnemy: MonoBehaviour
 {
     public GameObject enemyRaphaelBullet;
-    int hitpoints;
     float shootWait;
     float shootDelay;
 
     // Start is called before the first frame update
     void Start()
     {
-        hitpoints = 100;
         shootDelay = 3.0f;
         shootWait = 0f;
 
@@ -23,7 +21,7 @@ public class RaphaelEnemy: MonoBehaviour
     {
         Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("player").transform.position - transform.position;
         transform.rotation = Quaternion.LookRotation(dirToPlayer, Vector3.up);
-        transform.position = transform.position + transform.forward * 0.05f;
+        transform.position = transform.position + transform.forward * 0.001f;
         shootWait += Time.deltaTime;
         if (shootWait > shootDelay)
         {

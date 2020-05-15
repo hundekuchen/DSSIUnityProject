@@ -28,7 +28,7 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
             Debug.Log("treffer");
-            other.gameObject.GetComponent<EnemyDamage>().takeDamage(10);
+            other.gameObject.GetComponent<EnemyDamage>().takeDamage(10); //schaden
         }
     }
 }
