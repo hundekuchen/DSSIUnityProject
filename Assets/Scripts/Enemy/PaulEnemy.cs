@@ -13,7 +13,7 @@ public class PaulEnemy : MonoBehaviour
     void Start()
     {
         hitpoints = 1000;
-        shootDelay = 10.0f;
+        shootDelay = 0.50f;
         shootWait = 0f;
 
     }
@@ -21,9 +21,9 @@ public class PaulEnemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
+        Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("player").transform.position - transform.position;
         transform.rotation = Quaternion.LookRotation(dirToPlayer, Vector3.up);
-        //transform.position = transform.position + transform.forward * 0.01f;
+        transform.position = transform.position + transform.forward * 0.05f;
         GetComponent<Rigidbody>().AddForce(transform.forward * 0.5f);
         shootWait += Time.deltaTime;
         if (shootWait > shootDelay)
