@@ -5,13 +5,12 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
     float speed;
-    float age;
+    //float age;
     float destroyTime;
     // Start is called before the first frame update
     void Start()
     {
         destroyTime = 1.0f;
-        age = 0.0f;
         speed = 30f;
         //Debug.Log(transform.forward);
         Destroy(gameObject, destroyTime);
@@ -28,7 +27,7 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
             Debug.Log("treffer");
-            other.gameObject.GetComponent<EnemyDamage>().takeDamage(10); //schaden
+            other.gameObject.GetComponent<EnemyStats>().takeDamage(10); //schaden
         }
     }
 }

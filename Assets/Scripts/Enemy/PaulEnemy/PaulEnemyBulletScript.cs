@@ -5,13 +5,11 @@ using UnityEngine;
 public class PaulEnemyBulletScript : MonoBehaviour
 {
     float speed;
-    float age;
     float destroyTime;
     // Start is called before the first frame update
     void Start()
     {
         destroyTime = 1.0f;
-        age = 0.0f;
         speed = 1f;
         //Debug.Log(transform.forward);
         //Destroy(gameObject, destroyTime);
@@ -28,7 +26,7 @@ public class PaulEnemyBulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
             Debug.Log("treffer");
-            other.gameObject.GetComponent<EnemyDamage>().takeDamage(10);
+            other.gameObject.GetComponent<EnemyStats>().takeDamage(10);
         }
     }
 }

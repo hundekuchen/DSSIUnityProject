@@ -5,14 +5,13 @@ using UnityEngine;
 public class PaulEnemy : MonoBehaviour
 {
     public GameObject enemyBullet;
-    int hitpoints;
     float shootWait;
     float shootDelay;
 
     // Start is called before the first frame update
     void Start()
     {
-        hitpoints = 1000;
+        GetComponent<EnemyStats>().setData(1000, 1.5f, 5f); //hitpoints, armor, speed
         shootDelay = 0.50f;
         shootWait = 0f;
 
@@ -23,23 +22,16 @@ public class PaulEnemy : MonoBehaviour
     {
         Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("player").transform.position - transform.position;
         transform.rotation = Quaternion.LookRotation(dirToPlayer, Vector3.up);
-        transform.position = transform.position + transform.forward * 0.05f;
-        GetComponent<Rigidbody>().AddForce(transform.forward * 0.5f);
+        if(Vector3.SqrMagnitude(dirToPlayer)>3f)
+        {
+            transform.position = transform.position + transform.forward * GetComponent<EnemyStats>().getSpeed();
+            //GetComponent<Rigidbody>().AddForce(transform.forward * 0.5f);
+        }
         shootWait += Time.deltaTime;
         if (shootWait > shootDelay)
         {
             Instantiate(enemyBullet, transform.position + 2 * transform.forward, transform.rotation);
             shootWait = 0f;
-        }
-    }
-
-    public void takeDamage(int damage)
-    {
-        hitpoints -= damage;
-        Debug.Log("hitpoints = " + hitpoints);
-        if (hitpoints < 0)
-        {
-            Destroy(gameObject);
         }
     }
 }
