@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7608032649253095217}
   - component: {fileID: 5402036430829942556}
   m_Layer: 0
-  m_Name: enemyBullet
+  m_Name: enemyKaiBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

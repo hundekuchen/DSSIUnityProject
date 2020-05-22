@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    public int hitpoints;
+    public int initialHitpoints;
+    public int remainingHitpoints;
+    float newColor;
+
     public float speed;
     public float armor;
     public float shootCooldown;
@@ -16,11 +19,14 @@ public class EnemyStats : MonoBehaviour
         //speed = 10f;
         //armor = 10f;
         //hitpoints = 1000;
+        newColor = 255f;
+        GetComponent<Renderer>().material.color = new Color(0, 0, 0); //sets initial color to black
     }
 
     public void setData(int hp, float s, float a)
     {
-        hitpoints = hp;
+        initialHitpoints = hp;
+        remainingHitpoints = hp;
         speed = s;
         armor = a;
     }
@@ -33,11 +39,14 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     public void takeDamage(int damage)
     {
-        hitpoints -= damage;
+        remainingHitpoints -= damage;
         //Debug.Log("hitpoints = " + hitpoints);
-        if (hitpoints < 0)
+        if (remainingHitpoints < 0)
         {
             Destroy(gameObject);
         }
+        //Color change:
+        newColor = (float)remainingHitpoints / (float)initialHitpoints; //newColor value goes toward 0
+        GetComponent<Renderer>().material.color = new Color(1 - newColor, 0, 0); //color turning red
     }
 }

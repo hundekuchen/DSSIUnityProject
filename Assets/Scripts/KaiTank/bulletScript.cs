@@ -28,6 +28,7 @@ public class bulletScript : MonoBehaviour
         {
             Debug.Log("treffer");
             other.gameObject.GetComponent<EnemyStats>().takeDamage(10); //schaden
+            Destroy(gameObject);
         }
     }
 }

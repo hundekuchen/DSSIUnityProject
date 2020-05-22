@@ -13,8 +13,8 @@ public class moveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 0.08f;
-        turnSpeed = 3f;
+        moveSpeed = 0.008f;
+        turnSpeed = 2f;
         distDeltatTracks = 0.1f;
         distFromTracks = 0.0f;
 
