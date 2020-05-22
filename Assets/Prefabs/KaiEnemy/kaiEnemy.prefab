@@ -138,3 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5bf9509ef509642a933425b6ab3e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitpoints: 0
+  speed: 0
+  armor: 0
+  shootCooldown: 0
+  bulletDamage: 0

@@ -23,7 +23,7 @@ public class KaiEnemyScript : MonoBehaviour
         Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("player").transform.position - transform.position;
         //Debug.Log(Vector3.Magnitude(dirToPlayer));
         transform.rotation = Quaternion.LookRotation(dirToPlayer, Vector3.up);
-        if (Vector3.SqrMagnitude(dirToPlayer) > 3f)
+        if (Vector3.SqrMagnitude(dirToPlayer) > 5f)
         {
             //transform.position = transform.position + transform.forward * GetComponent<EnemyStats>().getSpeed();
             transform.Translate(transform.forward * GetComponent<EnemyStats>().getSpeed() * Time.deltaTime, Space.World);
