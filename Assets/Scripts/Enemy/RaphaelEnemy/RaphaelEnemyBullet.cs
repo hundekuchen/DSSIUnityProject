@@ -12,6 +12,8 @@ public class RaphaelEnemyBullet : MonoBehaviour
     {
         destroytime = 2.0f;
         speed = 10f;
+
+        Destroy(gameObject, destroytime);
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class RaphaelEnemyBullet : MonoBehaviour
         //{
         //   if (other.gameObject.CompareTag("player"))
         //    {
-        //        other.gameObject.GetComponent<moveScript>().takeDamage(10);
+        //       other.gameObject.GetComponent<moveScript>().takeDamage(10);
         //    }
         //}
     }

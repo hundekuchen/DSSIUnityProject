@@ -11,7 +11,7 @@ public class RaphaelEnemy: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<EnemyStats>().setData(100, 5f, 0.1f); //hitpoints, armor, speed
+        GetComponent<EnemyStats>().setData(100, 3f, 0.1f); //hitpoints, armor, speed
         shootDelay = 3.0f;
         shootWait = 0f;
 
@@ -22,9 +22,16 @@ public class RaphaelEnemy: MonoBehaviour
     {
         Vector3 dirToPlayer = GameObject.FindGameObjectWithTag("player").transform.position - transform.position;
         transform.rotation = Quaternion.LookRotation(dirToPlayer, Vector3.up);
-        transform.position = transform.position + transform.forward * GetComponent<EnemyStats>().getSpeed();
+
+        if (Vector3.SqrMagnitude(dirToPlayer) > 100f)
+        {
+            transform.Translate(transform.forward * GetComponent<EnemyStats>().getSpeed() * Time.deltaTime, Space.World);
+            float sp = GetComponent<EnemyStats>().getSpeed();
+        }
+
         shootWait += Time.deltaTime;
-        if (shootWait > shootDelay)
+
+        if (shootWait > shootDelay && Vector3.SqrMagnitude(dirToPlayer) <= 100f) 
         {
             Instantiate(enemyRaphaelBullet, transform.position + 2 * transform.forward, transform.rotation);
             shootWait = 0f;
