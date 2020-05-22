@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8748808371712848550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d58f118c1108b4a99c1df5855a4bfb, type: 3}
+  m_Script: {fileID: 11500000, guid: e3f6c8e1ec851c949bdba1fc387ce679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyRaphaelBullet: {fileID: 1738126684736748581, guid: 6f8e0a197d992b442b25135f6468e2f3,
@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5bf9509ef509642a933425b6ab3e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 0
+  initialHitpoints: 0
+  remainingHitpoints: 0
   speed: 0
   armor: 0
   shootCooldown: 0

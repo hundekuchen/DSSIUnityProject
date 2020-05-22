@@ -11,7 +11,7 @@ public class RaphaelEnemy: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<EnemyStats>().setData(100, 3f, 0.1f); //hitpoints, armor, speed
+        GetComponent<EnemyStats>().setData(1000, 3f, 0.1f); //hitpoints, armor, speed
         shootDelay = 3.0f;
         shootWait = 0f;
 
